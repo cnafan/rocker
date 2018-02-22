@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.johnny.rocker.MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/infobar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/temperature"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/temperature" />
+
+        <Switch
+            android:id="@+id/led_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/light" />
+    </LinearLayout>
+
+    <com.example.johnny.rocker.VideoSurfaceView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:layout_below="@id/infobar"
+        android:background="@color/transparent" />
+
+    <com.example.johnny.rocker.MySurfaceView
+        android:id="@+id/mySurfaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/videoView"
+        android:clickable="true"
+        android:focusable="true" />
+
+</RelativeLayout>

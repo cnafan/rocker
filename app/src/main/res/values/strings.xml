@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Rocker</string>
+    <string name="light">闪光灯 </string>
+    <string name="temperature">温度：</string>
+</resources>

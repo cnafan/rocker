@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\.gradle\caches\transforms-1\files-1.1\support-compat-25.3.1.aar\bfa1a6710b07bef46bf3f49939e07de8\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\.gradle\caches\transforms-1\files-1.1\appcompat-v7-25.3.1.aar\6bf142ff5fd214b4d1b65db17f41d890\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\.gradle\caches\transforms-1\files-1.1\support-vector-drawable-25.3.1.aar\fff0d880c67097b105b1e9cf6fea17ea\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\.gradle\caches\transforms-1\files-1.1\support-core-ui-25.3.1.aar\d46b6d37ca2b457f54d09a0caad765b1\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\AndroidStudioProjects\Rocker\app\libs\httpcomponents-client-4.2.2\lib\httpcore-4.2.2.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="b76bee23cd3f3ee9b98bc7c2c14670e821ddbbfd">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\.gradle\caches\transforms-1\files-1.1\support-v4-25.3.1.aar\4c22bf2c4b3d7719fadd69e1e7129cdf\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\.gradle\caches\transforms-1\files-1.1\support-core-utils-25.3.1.aar\3db9b4eb97070d635e1aa4335dc28548\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\AndroidStudioProjects\Rocker\app\libs\httpcomponents-client-4.2.2\lib\httpclient-4.2.2.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="872a71eac51131524f72f3100781dd88a42c9ccc">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\.gradle\caches\transforms-1\files-1.1\support-fragment-25.3.1.aar\71d9701a869e4efd807c7c656de7a716\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\.gradle\caches\transforms-1\files-1.1\animated-vector-drawable-25.3.1.aar\3e3aee001b5c40d47f108b0f2bbb203c\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\johnny\.gradle\caches\transforms-1\files-1.1\support-media-compat-25.3.1.aar\91ba9251b444a8737b9c7c0208b45aae\jars\classes.jar"
+        jumboMode="false"
+        min-sdk-version="21"
+        optimize="true"
+        revision="26.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="C:\Users\johnny\AndroidStudioProjects\Rocker\app\build\intermediates\transforms\preDex\release\9.jar" />
+    </item>
+
+</items>
