@@ -7,14 +7,31 @@
 
 
     <LinearLayout
+        android:layout_margin="10dp"
         android:id="@+id/infobar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
         android:orientation="horizontal">
 
+        <Switch
+            android:id="@+id/scanip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/scan" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/ip"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
         <TextView
-            android:visibility="invisible"
+            android:visibility="gone"
             android:id="@+id/temperature"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -25,7 +42,6 @@
             android:id="@+id/led_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
             android:text="@string/light" />
     </LinearLayout>
 

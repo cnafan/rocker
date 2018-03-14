@@ -10,11 +10,15 @@ import android.graphics.PorterDuff;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
+import android.support.design.widget.Snackbar;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
+
+import java.util.ArrayList;
+
 
 /**
  * Created by johnny on 2018/1/20.
@@ -22,6 +26,8 @@ import android.view.SurfaceView;
 
 public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback, Runnable {
 
+    //是否扫描到ip
+    static int scanIP = 0;
     Paint paint;
     Canvas canvas;
     // 创建一个线程启动绘图
@@ -50,6 +56,21 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
 
     private int lastDirection = 0;
 
+    int ScanIp() {
+        ArrayList<String> arrayList = new ScanIP().getConnectedHotIP();
+        if (arrayList != null) {
+            if (arrayList.size() > 0) {
+                MainActivity.ip = arrayList.get(0);
+                //Snackbar.make(this,"扫描到设备:" + MainActivity.ip,Snackbar.LENGTH_SHORT).show();
+                //Toast.makeText(getContext(), "扫描到设备:" + MainActivity.ip, Toast.LENGTH_SHORT).show();
+                return 1;
+            }
+        }
+        //Snackbar.make(getRootView(),"扫描到设备:",Snackbar.LENGTH_SHORT).show();
+        //Toast.makeText(getContext(), "未扫描到设备", Toast.LENGTH_SHORT).show();
+        return 0;
+    }
+
     // 当在代码中创建MySurfaceView对象的时候，会使用该构造器的方法
     public MySurfaceView(Context context) {
         super(context);
@@ -67,20 +88,28 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
     // 初始化方法
     @SuppressLint("HandlerLeak")
     public void init() {
-
-        //socket init
-        Thread thread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                ctrlSocketClient = new CtrlSocketClient();
-            }
-        });
-        thread.start();
-        try {
-            thread.join();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        scanIP=ScanIp();
+        switch (scanIP) {
+            case 1:
+                //socket init
+                Thread thread = new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        Log.i("MySurfaceView", "ip:" + MainActivity.ip);
+                        ctrlSocketClient = new CtrlSocketClient(MainActivity.ip);
+                    }
+                });
+                thread.start();
+                try {
+                    thread.join();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                break;
+            default:
+                break;
         }
+
 
         holder = getHolder();
         // 添加当前SurfaceView的状态回调
@@ -107,12 +136,18 @@ public class MySurfaceView extends SurfaceView implements SurfaceHolder.Callback
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
                 //这个方法是运行在 handler-thread 线程中的 ，可以执行耗时操作
-                Log.i("handler ", "消息： " + msg.what + "  线程： " + Thread.currentThread().getName());
+                //Log.i("handler ", "消息： " + msg.what + "  线程： " + Thread.currentThread().getName());
                 switch (msg.arg1) {
                     case 3:
                         //direction
-                        Log.i("handler ", "case:" + (String) msg.obj);
-                        ctrlSocketClient.sendmsg((String) msg.obj, 0);
+                        //Log.i("handler ", "case:" + (String) msg.obj);
+                        switch (scanIP){
+                            case 1:
+                                ctrlSocketClient.sendmsg((String) msg.obj, 0);
+                                break;
+                        default:
+                            break;
+                        }
                         break;
                 }
             }

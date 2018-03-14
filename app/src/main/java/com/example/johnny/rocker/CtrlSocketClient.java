@@ -6,15 +6,10 @@ import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.ObjectOutputStream;
-
-import java.io.Serializable;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.io.Serializable;
 import java.net.Socket;
 
 /**
@@ -34,8 +29,20 @@ class CtrlSocketClient {
 
     CtrlSocketClient(Handler handler) {
         this.handler = handler;
+
         try {
             socket = new Socket(IpAddress, Port);
+            //Log.i("CtrlSocket", "socket:" + socket);
+        } catch (IOException e) {
+            e.printStackTrace();
+            Log.i("CtrlSocket", "exception:" + e);
+        }
+    }
+
+    CtrlSocketClient(String ip) {
+
+        try {
+            socket = new Socket(ip, Port);
             //Log.i("CtrlSocket", "socket:" + socket);
         } catch (IOException e) {
             e.printStackTrace();
@@ -44,6 +51,7 @@ class CtrlSocketClient {
     }
 
     CtrlSocketClient() {
+
         try {
             socket = new Socket(IpAddress, Port);
             //Log.i("CtrlSocket", "socket:" + socket);
@@ -53,18 +61,21 @@ class CtrlSocketClient {
         }
     }
 
-    boolean checksocket(){
+    boolean checksocket() {
         return false;
     }
-    void sendmsg(String info,int id) {
+
+    void sendmsg(String info, int id) {
         if (socket == null) {
             return;
         }
+
 
         if (socket.isConnected()) {
             // 获取 Client 端的输出/输入流
             PrintWriter out = null;
             try {
+                //out=new PrintWriter(socket.getOutputStream(),true);
                 out = new PrintWriter(new BufferedWriter(new OutputStreamWriter(socket.getOutputStream(), "UTF-8")), true);
             } catch (IOException e) {
                 Log.i("CtrlSocketClient", "outexcept:" + e);

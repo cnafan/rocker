@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Rocker</string>
-    <string name="light">闪光灯 </string>
+    <string name="light">大灯 </string>
     <string name="temperature">温度：</string>
+    <string name="scan">扫描</string>
+    <string name="please_wait">请稍后</string>
+    <string name="scaning">正在扫描中</string>
 </resources>
